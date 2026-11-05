@@ -1,0 +1,45 @@
+{
+  "name": "observability-sdk-unified",
+  "version": "0.1.0",
+  "description": "Unified observability SDK emitting OpenTelemetry + Prometheus + Datadog + CloudWatch simultaneously",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc -w",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "format": "prettier --write src",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build && npm run test && npm run lint"
+  },
+  "keywords": ["opentelemetry","prometheus","datadog","cloudwatch","multi-backend","zero-config"],
+  "author": "AIONEXT &lt;aionext@outlook.com&gt;",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AIONEXT/observability-sdk-unified.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AIONEXT/observability-sdk-unified/issues"
+  },
+  "homepage": "https://github.com/AIONEXT/observability-sdk-unified#readme",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "@typescript-eslint/eslint-plugin": "^6.17.0",
+    "@typescript-eslint/parser": "^6.17.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.1.1",
+    "typescript": "^5.3.3",
+    "vitest": "^1.1.0"
+  }
+}
